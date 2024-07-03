@@ -1,0 +1,22 @@
+package pack.controller;
+
+import pack.model.MoneyInter;
+
+public class MyProcess implements MyInter{
+	private MoneyInter inter;
+	private int re[];
+	
+	
+	@Override
+	public void inputMoney() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void showResult() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

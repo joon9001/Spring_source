@@ -1,0 +1,13 @@
+package pack.model;
+
+public interface MoneyCalc extends MoneyInter {
+	
+	@Override
+	default int[] calcMoney(int money) {  // 45678
+		int re[] = new int[5];
+		re[0] = money /10000;
+				
+		return re;
+	}
+
+}

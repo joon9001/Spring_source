@@ -1,0 +1,13 @@
+package pack.model;
+
+public class PriceCalc implements PriceInter {
+	int suryang;
+	int danga;
+	int price;
+	
+	public int calcPrice(int suryang, int danga) {  // 45678
+
+		int price = suryang * danga; 
+		return price;
+	}
+}

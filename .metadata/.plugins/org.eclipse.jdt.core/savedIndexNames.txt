@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\work2\sprsou\.metadata\.plugins\org.eclipse.jdt.core
+3622679124.index
+3730566571.index
+3751380892.index
+1517136315.index
+1865797976.index
