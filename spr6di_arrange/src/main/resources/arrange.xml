@@ -3,6 +3,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
 	<bean id="mImpl" class="pack.controller.MessageImpl" scope="singleton"> <!-- "prototype" -->
 		<!-- contructor injection, 원래는 index, type을 생략한다. -->
 		<constructor-arg index="0" type="java.lang.String"> 
@@ -14,7 +15,7 @@
 		<constructor-arg index="2" type="int" value="24" />
 		<constructor-arg index="3" type="pack.model.MyInfoInter" ref="my" />
 		
-		<!-- setter injection -->
+		<!-- setter injection, 아래 property는 사실 setProperty이다 -->
 		<property name="spec">
 			<value>자바 개발 전문</value>
 		</property>

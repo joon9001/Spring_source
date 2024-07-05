@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 //@Component("sen") 
 //@Scope("singleton") 
 
-public class Sender {
+public class Sender implements SenderInter{
 	public void show() {
 		System.out.println("Sender의 show method 수행");
 	}
