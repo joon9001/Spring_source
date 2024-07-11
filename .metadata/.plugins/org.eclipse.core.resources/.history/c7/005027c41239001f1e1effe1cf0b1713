@@ -1,6 +1,0 @@
-package pack.model;
-
-public interface PriceInter {
-	int calcPrice(int suryang, int danga);
-	//.../
-}
