@@ -13664,3 +13664,960 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 15:42:28.901
 !MESSAGE Classpath changed for project: sprweb4
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-07-11 18:22:11.846
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:725)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:340)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:229)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:92)
+	at org.eclipse.jface.resource.LazyResourceManager.create(LazyResourceManager.java:88)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:71)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:92)
+	at org.eclipse.jface.resource.ResourceManager.get(ResourceManager.java:145)
+	at org.eclipse.egit.ui.internal.UIIcons.getImage(UIIcons.java:569)
+	at org.eclipse.egit.ui.internal.actions.SwitchToMenu.<init>(SwitchToMenu.java:108)
+	at org.eclipse.egit.ui.internal.actions.SwitchToMenu.<init>(SwitchToMenu.java:95)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:233)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:987)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:275)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:65)
+	at org.eclipse.ui.internal.util.Util.safeLoadExecutableExtension(Util.java:496)
+	at org.eclipse.ui.internal.menus.DynamicMenuContributionItem.createContributionItem(DynamicMenuContributionItem.java:215)
+	at org.eclipse.ui.internal.menus.DynamicMenuContributionItem.getContributionItem(DynamicMenuContributionItem.java:209)
+	at org.eclipse.ui.internal.menus.DynamicMenuContributionItem.fill(DynamicMenuContributionItem.java:185)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:728)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:805)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:494)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:272)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4285)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1160)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1184)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1165)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5121)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4741)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1482)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2319)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:241)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3667)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+!SESSION 2024-07-11 22:06:19.470 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-07-11 22:08:03.535
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-07-11 22:08:07.931
+!MESSAGE Logback config file: C:\work2\sprsou\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-07-11 22:08:09.385
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-11 22:08:09.385
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-07-11 22:08:10.315
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-11 22:08:10.315
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-07-11 22:08:24.321
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\work2\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530\jre\bin\javaw.exe
+-cp
+C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes;C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/work2/sprsou/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1720703304321
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:24.321
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-07-11 22:08:24.387
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 15456
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.808
+!MESSAGE Boot project ADDED: spr1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.808
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.808
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.808
+!MESSAGE Boot project ADDED: spr10aop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.808
+!MESSAGE Boot project ADDED: spr11aop_anno
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.808
+!MESSAGE Boot project ADDED: spr12aop_login
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.824
+!MESSAGE Boot project ADDED: spr13db_legacy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.825
+!MESSAGE Boot project ADDED: spr14db_jdbcDaoSupport
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.825
+!MESSAGE Boot project ADDED: spr15db_JdbcDaoSupport_anno
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.825
+!MESSAGE Boot project ADDED: spr16db_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:27.825
+!MESSAGE Boot project ADDED: spr16db_jdbcdaosupport_aop
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-07-11 22:08:27.871
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\onlyl'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.267
+!MESSAGE Boot project ADDED: spr17db_mybatis
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.267
+!MESSAGE Boot project ADDED: spr18db_mybatis_anno
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.267
+!MESSAGE Boot project ADDED: spr18db_mybatis_anno_EX
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.283
+!MESSAGE Boot project ADDED: spr19_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.283
+!MESSAGE Boot project ADDED: spr19jpa
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.283
+!MESSAGE Boot project ADDED: spr20jpa_join
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.294
+!MESSAGE Boot project ADDED: spr2di
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.294
+!MESSAGE Boot project ADDED: spr3di
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.299
+!MESSAGE Boot project ADDED: spr3di_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.299
+!MESSAGE Boot project ADDED: spr4di_setter
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.362
+!MESSAGE Boot project ADDED: spr5di_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.362
+!MESSAGE Boot project ADDED: spr5di_setter
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.362
+!MESSAGE Boot project ADDED: spr6di_arrange
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.378
+!MESSAGE Boot project ADDED: spr7anno_auto
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.394
+!MESSAGE Boot project ADDED: spr8bank
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.394
+!MESSAGE Boot project ADDED: spr9aop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.394
+!MESSAGE Boot project ADDED: sprweb1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.394
+!MESSAGE Boot project ADDED: sprweb2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.409
+!MESSAGE Boot project ADDED: sprweb3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-11 22:08:28.409
+!MESSAGE Boot project ADDED: sprweb4
+!SESSION 2024-07-12 09:15:45.466 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-07-12 09:16:25.692
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-07-12 09:16:27.945
+!MESSAGE Logback config file: C:\work2\sprsou\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-07-12 09:16:28.575
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-12 09:16:28.576
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-07-12 09:16:28.939
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-12 09:16:28.939
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-07-12 09:16:35.698
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\work2\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530\jre\bin\javaw.exe
+-cp
+C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes;C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/work2/sprsou/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1720743395694
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:35.699
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-07-12 09:16:35.724
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 21792
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.862
+!MESSAGE Boot project ADDED: spr1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.863
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.866
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.880
+!MESSAGE Boot project ADDED: spr10aop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.884
+!MESSAGE Boot project ADDED: spr11aop_anno
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.893
+!MESSAGE Boot project ADDED: spr12aop_login
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.900
+!MESSAGE Boot project ADDED: spr13db_legacy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.908
+!MESSAGE Boot project ADDED: spr14db_jdbcDaoSupport
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.914
+!MESSAGE Boot project ADDED: spr15db_JdbcDaoSupport_anno
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-07-12 09:16:37.921
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\onlyl'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.928
+!MESSAGE Boot project ADDED: spr16db_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.935
+!MESSAGE Boot project ADDED: spr16db_jdbcdaosupport_aop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.948
+!MESSAGE Boot project ADDED: spr17db_mybatis
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.963
+!MESSAGE Boot project ADDED: spr18db_mybatis_anno
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.988
+!MESSAGE Boot project ADDED: spr18db_mybatis_anno_EX
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:37.990
+!MESSAGE Boot project ADDED: spr19_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.006
+!MESSAGE Boot project ADDED: spr19jpa
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.019
+!MESSAGE Boot project ADDED: spr20jpa_join
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.025
+!MESSAGE Boot project ADDED: spr2di
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.032
+!MESSAGE Boot project ADDED: spr3di
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.032
+!MESSAGE Boot project ADDED: spr3di_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.042
+!MESSAGE Boot project ADDED: spr4di_setter
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.047
+!MESSAGE Boot project ADDED: spr5di_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.052
+!MESSAGE Boot project ADDED: spr5di_setter
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.056
+!MESSAGE Boot project ADDED: spr6di_arrange
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.067
+!MESSAGE Boot project ADDED: spr7anno_auto
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.076
+!MESSAGE Boot project ADDED: spr8bank
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.081
+!MESSAGE Boot project ADDED: spr9aop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.081
+!MESSAGE Boot project ADDED: sprweb1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.102
+!MESSAGE Boot project ADDED: sprweb2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.102
+!MESSAGE Boot project ADDED: sprweb3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:16:38.102
+!MESSAGE Boot project ADDED: sprweb4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:53:28.013
+!MESSAGE Classpath changed for project: sprweb5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:53:28.014
+!MESSAGE Boot project ADDED: sprweb5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 09:53:28.357
+!MESSAGE Classpath changed for project: sprweb5
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:22.227
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:22.295
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:22.359
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:22.671
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:22.755
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:22.839
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:22.910
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:22.981
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:23.134
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:23.212
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:23.283
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:23.913
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:24.024
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:24.128
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:24.436
+!MESSAGE The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:25.941
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:25.951
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:26.392
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:26.399
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:26.479
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:26.486
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:26.561
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:26.567
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:26.973
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:26.989
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.046
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.050
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.138
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.146
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.340
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.350
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.648
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.652
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.837
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.843
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.964
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:27.969
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.108
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.111
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.186
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.193
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.282
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.290
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.350
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.357
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.390
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.392
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.442
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.448
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.488
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.491
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.528
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.531
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.574
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.582
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.622
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.624
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.695
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.703
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.783
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.791
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.867
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.872
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.914
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 10:45:28.917
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 10:48:10.469
+!MESSAGE Classpath changed for project: sprweb6th
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 10:48:10.470
+!MESSAGE Boot project ADDED: sprweb6th
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 10:48:11.413
+!MESSAGE Classpath changed for project: sprweb6th
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 10:48:12.292
+!MESSAGE Classpath changed for project: sprweb6th
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 10:49:18.242
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 10:49:18.243
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 10:49:18.246
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 10:49:18.247
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 10:49:18.256
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 10:49:18.260
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.731
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.736
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.775
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.780
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.844
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.847
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.899
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.903
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.968
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:32.973
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.025
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.028
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.098
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.100
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.199
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.202
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.367
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.371
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.441
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.445
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.521
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.524
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.617
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.621
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.701
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.705
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.776
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.780
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.821
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.827
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.880
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.883
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.943
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:33.947
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.010
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.015
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.058
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.062
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.102
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.104
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.138
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.142
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.168
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.171
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.227
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.233
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.450
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.454
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.514
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-07-12 14:42:34.519
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 14:48:14.879
+!MESSAGE Classpath changed for project: sprweb7th
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 14:48:14.880
+!MESSAGE Boot project ADDED: sprweb7th
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 14:48:19.257
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 14:48:19.258
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 14:48:19.258
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 14:48:19.258
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 14:48:19.261
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 14:48:19.262
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 15:35:35.007
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 15:35:35.008
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 15:35:35.009
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 15:35:35.010
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 15:35:35.015
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 15:35:35.018
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 16:29:01.225
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 16:29:01.226
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 16:29:01.226
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 16:29:01.227
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 16:29:01.230
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-12 16:29:01.232
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+!SESSION 2024-07-12 17:35:39.821 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-07-12 17:36:53.721
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-07-12 17:36:56.489
+!MESSAGE Logback config file: C:\work2\sprsou\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-07-12 17:36:57.216
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-12 17:36:57.216
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-07-12 17:36:57.654
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-12 17:36:57.654
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-07-12 17:37:07.153
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\onlyl'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.368
+!MESSAGE Boot project ADDED: spr1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.369
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.372
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.387
+!MESSAGE Boot project ADDED: spr10aop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.393
+!MESSAGE Boot project ADDED: spr11aop_anno
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.400
+!MESSAGE Boot project ADDED: spr12aop_login
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.414
+!MESSAGE Boot project ADDED: spr13db_legacy
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.419
+!MESSAGE Boot project ADDED: spr14db_jdbcDaoSupport
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.424
+!MESSAGE Boot project ADDED: spr15db_JdbcDaoSupport_anno
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-07-12 17:37:07.428
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\work2\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.3.v20240426-1530\jre\bin\javaw.exe
+-cp
+C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes;C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\work2\eclipse\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/work2/sprsou/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1720773427427
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.429
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.430
+!MESSAGE Boot project ADDED: spr16db_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.437
+!MESSAGE Boot project ADDED: spr16db_jdbcdaosupport_aop
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-07-12 17:37:07.438
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 18060
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.455
+!MESSAGE Boot project ADDED: spr17db_mybatis
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.468
+!MESSAGE Boot project ADDED: spr18db_mybatis_anno
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.484
+!MESSAGE Boot project ADDED: spr18db_mybatis_anno_EX
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.498
+!MESSAGE Boot project ADDED: spr19_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.511
+!MESSAGE Boot project ADDED: spr19jpa
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.525
+!MESSAGE Boot project ADDED: spr20jpa_join
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.530
+!MESSAGE Boot project ADDED: spr2di
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.536
+!MESSAGE Boot project ADDED: spr3di
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.542
+!MESSAGE Boot project ADDED: spr3di_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.548
+!MESSAGE Boot project ADDED: spr4di_setter
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.554
+!MESSAGE Boot project ADDED: spr5di_ex
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.576
+!MESSAGE Boot project ADDED: spr5di_setter
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.585
+!MESSAGE Boot project ADDED: spr6di_arrange
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.600
+!MESSAGE Boot project ADDED: spr7anno_auto
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.618
+!MESSAGE Boot project ADDED: spr8bank
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.631
+!MESSAGE Boot project ADDED: spr9aop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.646
+!MESSAGE Boot project ADDED: sprweb1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.661
+!MESSAGE Boot project ADDED: sprweb2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.674
+!MESSAGE Boot project ADDED: sprweb3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.674
+!MESSAGE Boot project ADDED: sprweb4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.676
+!MESSAGE Boot project ADDED: sprweb5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.677
+!MESSAGE Boot project ADDED: sprweb6th
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-12 17:37:07.679
+!MESSAGE Boot project ADDED: sprweb7th
