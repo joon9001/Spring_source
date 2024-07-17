@@ -8,7 +8,7 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	<!-- Target -->
 	<bean id="targetBean" class="pack.MessageImpl">
-		<property name="name" value="스프링" />
+		<property name="name" value="스프링" />  <!-- 여기서 property는 setProperty이다. -->
 	</bean>
 
 

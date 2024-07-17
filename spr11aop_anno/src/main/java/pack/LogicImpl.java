@@ -3,7 +3,8 @@ package pack;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service //business 로직을 처리하는 서비스 
+@Service //business 로직을 처리하는 서비스
+//핵심 비즈니스 로직을 의미하며 advice(before,after,around)의 타겟 빈이다.
 public class LogicImpl implements LogicInter{
 	
 	@Autowired // autowired를 선언했으므로 빈 생성은 따로 안해도 됨

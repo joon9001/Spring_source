@@ -12,7 +12,8 @@ import org.springframework.stereotype.Component;
 public class MyAdvice {
 	
 	@Around("execution(public void startProcess())") 
-	//아래 joinpoint.proceed()가 수행하는 메소드는 public void startProcess()이다.
+	//main 파일의 startProcess()를 프록시 객체가 가로채서 위의 startProcess를 실행하도록 한다.
+	//위의 public void startProcess()는 아래 joinpoint.proceed()에서 수행된다.
 	public Object abc(ProceedingJoinPoint joinPoint) throws Throwable{
 		
 		System.out.println("AOP 시작: 핵심 로직 수행 전 id 검증");
