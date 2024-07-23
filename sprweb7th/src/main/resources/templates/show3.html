@@ -15,6 +15,7 @@
 			<th>상품명</th>
 		</tr>
 		<tr th:each="dto,status:${dtos}">
+		<!-- dtos 컬렉션의 각 요소를 dto로 바인딩하고, 상태 변수 status를 사용하여 반복 -->
 			<!-- 반복하면서 status에 index값이 저장됨 -->
 			<td th:if="${status.odd}" th:text="홀수"></td>
 			<td th:unless="${status.odd}" th:text="짝수"></td>

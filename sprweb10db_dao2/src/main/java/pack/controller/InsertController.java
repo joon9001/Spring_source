@@ -25,6 +25,8 @@ public class InsertController {
 	}
 	
 	@PostMapping("insert")
+	//insform의 form태그 submit하고 MemberBean bean을 아래처럼 선언해주면
+	//Spring MVC가 form태그의 id,name,passwd를 자동으로 MemberBean 객체에 바인딩시켜준다. 
 	public String submit(MemberBean bean) {
 		memberDao.insData(bean);
 		return "redirect:/list";  //추가 후 목록보기

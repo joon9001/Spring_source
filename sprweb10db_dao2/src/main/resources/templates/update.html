@@ -2,26 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>회원 정보 수정</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h3>* 회원 정보 수정 *</h3>
-<form th:action="@{/update}" th:object="${command}" method="post">
-    <table>
-        <tr>
-            <td>아이디:</td>
-            <td><input type="text" th:field="*{id}" readonly="readonly"/></td>
-        </tr>
-        <tr>
-            <td>비밀번호:</td>
-            <td><input type="password" th:field="*{passwd}"/></td>
-        </tr>
-        <tr>
-            <td>회원명:</td>
-            <td><input type="text" th:field="*{name}"/></td>
-        </tr>
-    </table>
-    <button type="submit">수정하기</button>
+** 자료 수정 **<p/>
+<!-- th:object="${member}로 인해 MemberBean의 member 객체와 동기화됨-->
+<form th:action="@{/update}" method="post" th:object="${member}">
+  id : [[*{id}]]
+  	<input type="hidden" th:field="*{id}" /><br>
+  pwd : <input type="text" th:field="*{passwd}" /><br>
+  name : <input type="text" th:field="*{name}"  /><br>
+  <br>
+  <input type="submit" value="수 정">
+  <input type="button" value="이 전" onclick="history.back()">
 </form>
 </body>
 </html>

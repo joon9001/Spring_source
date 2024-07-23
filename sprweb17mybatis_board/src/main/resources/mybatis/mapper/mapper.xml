@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pack.model.DataMapInterface">
+	<select id="selectList" resultType="pack.model.Board">
+		select * from springboard order by num desc
+	</select>
+	
+	<select id="selectSearch" parameterType="pack.controller.BoardBean"
+		resultType="pack.model.Board">
+		select * from springboard 
+		where ${searchName} like concat('%',#{searchValue},'%')
+		order by num desc
+	</select>
+	
+	<select id="selectOne" parameterType="string" resultType="pack.model.Board">
+		select * from springboard where num=#{num}
+	</select>
+<!--resultType="pack.model.Board"는 selectOne 쿼리가 실행된 후 
+반환된 결과를 Board 객체로 매핑할 것임을 지정합니다.  -->	
+	<insert id="insert" parameterType="pack.controller.BoardBean">
+		insert into springboard(num,author,title,content,bwrite,readcnt)
+		values((select max(num)+1 from springboard ali), #{author},#{title},#{content},now(),0)
+	<!-- num 자리에 서브쿼리가 들어가고 bwrite=now(), readcnt=0이 들어간다. -->
+	</insert>
+	
+	<update id="updateReadcnt" parameterType="string">
+		update springboard set readcnt=readcnt + 1
+		where num=#{num}
+	</update>
+	<!-- 밑에 parameterType은 SQL 쿼리에 전달되는 입력 파라미터의 타입이 pack.controller.BoardBean 클래스임을 
+	의미.이는 MyBatis가 해당 SQL 쿼리를 실행할 때 BoardBean 객체를 사용하여 파라미터를 전달한다는 것을 나타냄. -->
+	<update id="update" parameterType="pack.controller.BoardBean">
+		update springboard 
+		set author=#{author},title=#{title},content=#{content}
+		where num=#{num}
+	</update>
+	<!-- SQL 쿼리를 실행할 때 사용하는 입력 파라미터의 타입이 String -->
+	<delete id="delete" parameterType="string">
+		delete from springboard
+		where num=#{num}
+	</delete>
+</mapper>

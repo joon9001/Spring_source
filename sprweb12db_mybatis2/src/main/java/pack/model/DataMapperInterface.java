@@ -16,8 +16,8 @@ public interface DataMapperInterface {
 	List<MemDto> selectAll();
 	
 	@Select("Select * from mem where num=#{num}")
-	List<MemDto> selectPart(String num);
-	
+	MemDto selectPart(String num);
+	//하나만 읽을 것이기 때문에 List가 필요없다.
 	@Insert("insert into mem values(#{num},#{name},#{addr})")
 	int insertData(MemBean bean);
 	

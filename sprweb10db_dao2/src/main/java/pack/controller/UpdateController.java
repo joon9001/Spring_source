@@ -21,14 +21,15 @@ public class UpdateController {
     public MemberBean formBack() {
         return new MemberBean();
     }
-    // 위에는 메서드가 반환하는 객체를 Model에 command라는 이름으로 추가함.
+ 
     @GetMapping("update")
     public String update(@RequestParam("id") String id, Model model) {
         MemberDto dto = memberDao.getMember(id);
         model.addAttribute("member", dto);
         return "update";
     }
-    
+  //위의 model.addAttribute("member", dto)와 밑의 @ModelAttribute("member") MemberBean bean 둘다
+  // dto 객체의 별명을 member, MemberBean bean 객체의 별명을 member로 한다는 점에서 의미가 똑같다고 볼 수 있다.
     @PostMapping("update")
     public String submit(@ModelAttribute("member") MemberBean bean, Model model) {
         memberDao.upData(bean);

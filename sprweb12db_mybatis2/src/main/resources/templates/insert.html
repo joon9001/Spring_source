@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+** 자료 입력 **<br>
+<!-- form 태그의 th 타임리프가 입력된 데이터를 name과 일치하는 MemBean의 멤버 필드 값에 넣어준다. -->
+<form th:action="@{/insert}" method="post">
+번호 : <input type="text" name="num"><br>
+이름 : <input type="text" name="name"><br>
+주소 : <input type="text" name="addr"><br>
+<input type="submit" value="등록">
+</form>
+</body>
+</html>
