@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 캘린더 일정 추가</title>
+</head>
+<body>
+    <h1>네이버 캘린더 일정 추가</h1>
+    
+    <form id="calendarForm" action="/addSchedule" method="post">
+        <label for="title">일정 제목:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="description">일정 설명:</label><br>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <label for="location">장소:</label><br>
+        <input type="text" id="location" name="location" required><br><br>
+
+        <label for="start">시작 날짜 및 시간:</label><br>
+        <input type="datetime-local" id="start" name="start" required><br><br>
+
+        <label for="end">종료 날짜 및 시간:</label><br>
+        <input type="datetime-local" id="end" name="end" required><br><br>
+
+        <button type="submit">일정 추가</button>
+    </form>
+
+</body>
+</html>

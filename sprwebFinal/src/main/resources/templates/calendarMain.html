@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캘린더 메인 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .day {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 100px;
+            position: relative;
+        }
+
+        .day-header {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .event {
+            background-color: #007BFF;
+            color: white;
+            padding: 3px;
+            margin-top: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            display: block;
+        }
+
+        #loginButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #loginButton:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>캘린더 메인 페이지</h1>
+
+    <button id="loginButton" onclick="location.href='/naverLogin'">네이버 로그인</button>
+
+    <div id="calendar"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarElement = document.getElementById('calendar');
+
+            // 간단한 캘린더 데이터를 생성하는 함수 (월간 보기)
+            function generateCalendar() {
+                const daysInMonth = new Date(2024, 8, 0).getDate(); // 예시: 2024년 8월
+                const startDay = new Date(2024, 7, 1).getDay(); // 2024년 8월 1일의 요일
+
+                for (let i = 0; i < startDay; i++) {
+                    const dayElement = document.createElement('div');
+                    calendarElement.appendChild(dayElement);
+                }
+
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.classList.add('day');
+                    dayElement.innerHTML = `<div class="day-header">${day}</div>`;
+                    calendarElement.appendChild(dayElement);
+                }
+            }
+
+            // 네이버 캘린더 API 호출하여 일정을 가져오는 함수
+            function fetchEvents() {
+                const token = 'j0w6p6wymiLnhJI0wK'; // 네이버 API 액세스 토큰
+                const calendarId = 'defaultCalendarId'; // 캘린더 ID
+                const apiURL = `https://openapi.naver.com/calendar/schedules?calendarId=${calendarId}&startDate=20240801&endDate=20240831`;
+
+                fetch(apiURL, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // 데이터 형식에 맞게 이벤트 표시
+                    data.schedules.forEach(event => {
+                        const eventStart = new Date(event.startDate);
+                        const dayElement = calendarElement.children[eventStart.getDate() + startDay - 1];
+                        const eventElement = document.createElement('span');
+                        eventElement.classList.add('event');
+                        eventElement.textContent = event.summary;
+                        dayElement.appendChild(eventElement);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching events:', error);
+                });
+            }
+
+            generateCalendar();
+            fetchEvents();
+        });
+    </script>
+
+</body>
+</html>
