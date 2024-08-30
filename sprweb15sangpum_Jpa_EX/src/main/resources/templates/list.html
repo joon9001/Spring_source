@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>🌞</title>
+</head>
+<body>
+<h2>회원 정보 (mvc - jdbcDaoSupport)</h2>
+<th:block th:if="${list.size >0}">
+	<table>
+		<tr>
+			<th>사번</th><th>직원명</th><th>성별</th><th>연봉</th>
+		</tr>
+		<tr th:each="mem:${list}">
+			<td th:text="${mem.no}">id</td>
+			<td>[[${mem.name}]]</td>
+			<td>[[${mem.gen}]]</td>
+			<td>[[${mem.pay}]]</td>
+		</tr>
+	</table>
+</th:block>
+</body>
+</html>

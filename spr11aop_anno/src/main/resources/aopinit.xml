@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<context:component-scan base-package="pack" />
+<!-- context:component-scan 설정을 통해 pack 패키지에서 advice가 적용될 타겟 빈을 스캔함-->
+	<!-- aop 적용 -->
+	<aop:aspectj-autoproxy />
+	<!-- 위의 autoproxy는 @Aspect 어노테이션이 붙은 클래스를 스캔하여 
+	자동으로 어드바이스를 적용할 타겟 빈의 프록시 객체를 생성합니다. -->
+</beans>

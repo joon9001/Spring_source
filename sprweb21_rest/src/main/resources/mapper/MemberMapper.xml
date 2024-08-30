@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+	<select id="getList" resultType="memberDto">
+		select num,name,addr from memrest
+	</select>
+	
+	<select id="getData" parameterType = "int" resultType="memberDto">
+		select num,name,addr from memrest where num=#{num}
+	</select>
+	
+	<!-- application.properties에서 마지막에 alias를 줘서 경로 따로 설정할 필요 x-->
+	<insert id="insert" parameterType="memberDto">
+	insert into memrest(name,addr) values(#{name},#{addr})
+	</insert>
+	
+	<update id="update" parameterType="memberDto">
+	update memrest set name=#{name},addr=#{addr}
+	where num=#{num}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+	delete from memrest
+	where num=#{num}	
+	</delete>
+	
+</mapper>

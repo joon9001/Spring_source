@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+** 자료 수정 **<p/>
+<!-- th:object="${member}로 인해 MemberBean의 member 객체와 동기화됨-->
+<form th:action="@{/update}" method="post" th:object="${member}">
+  id : [[*{id}]]
+  	<input type="hidden" th:field="*{id}" /><br>
+  pwd : <input type="text" th:field="*{passwd}" /><br>
+  name : <input type="text" th:field="*{name}"  /><br>
+  <br>
+  <input type="submit" value="수 정">
+  <input type="button" value="이 전" onclick="history.back()">
+</form>
+</body>
+</html>
